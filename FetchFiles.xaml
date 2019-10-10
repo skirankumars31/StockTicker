@@ -111,9 +111,9 @@
               <av:PointCollection x:Key="ConnectorLocation">200,277 200,307 201,307 201,331</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+          <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_8">
             <ui:CommentOut.Body>
-              <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_129">
+              <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_130">
                 <Sequence DisplayName="Test Init" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_16">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -270,14 +270,14 @@
                       <av:PointCollection x:Key="ConnectorLocation">201,494 201,544</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Flowchart DisplayName="Fetch file for Stock Ident" sap:VirtualizedContainerService.HintSize="1165,1074" sap2010:WorkflowViewState.IdRef="Flowchart_4">
+                  <Flowchart DisplayName="Fetch file for Stock Ident" sap:VirtualizedContainerService.HintSize="1165,1120" sap2010:WorkflowViewState.IdRef="Flowchart_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <av:Point x:Key="ShapeLocation">613,0</av:Point>
                         <av:Size x:Key="ShapeSize">60,75</av:Size>
                         <av:PointCollection x:Key="ConnectorLocation">643,75 643,105 643.5,105 643.5,125</av:PointCollection>
-                        <x:Double x:Key="Height">1038</x:Double>
+                        <x:Double x:Key="Height">1084</x:Double>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         <x:Double x:Key="Width">1130.7826198989167</x:Double>
                       </scg:Dictionary>
@@ -299,7 +299,7 @@
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,234" sap2010:WorkflowViewState.IdRef="Sequence_70">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -336,17 +336,17 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <av:Point x:Key="ShapeLocation">468,479</av:Point>
                               <av:Size x:Key="ShapeSize">79,87</av:Size>
-                              <av:PointCollection x:Key="TrueConnector">468,522.5 440,522.5 440,586 500,586 500,616</av:PointCollection>
-                              <av:PointCollection x:Key="FalseConnector">547,522.5 560,522.5 560,586 200,586 200,616</av:PointCollection>
+                              <av:PointCollection x:Key="TrueConnector">468,522.5 270,522.5 270,616</av:PointCollection>
+                              <av:PointCollection x:Key="FalseConnector">547,522.5 830,522.5 830,616</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <FlowDecision.True>
                             <FlowStep x:Name="__ReferenceID5">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">400,616</av:Point>
+                                  <av:Point x:Key="ShapeLocation">170,616</av:Point>
                                   <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">500,667 500,697 504,697 504,717</av:PointCollection>
+                                  <av:PointCollection x:Key="ConnectorLocation">270,667 270,697 274,697 274,717</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Stock ident not found&quot;]" />
@@ -354,9 +354,9 @@
                                 <FlowStep x:Name="__ReferenceID3">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">404,717</av:Point>
+                                      <av:Point x:Key="ShapeLocation">174,717</av:Point>
                                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">504,768 504,798 511,798 511,818</av:PointCollection>
+                                      <av:PointCollection x:Key="ConnectorLocation">274,768 274,798 281,798 281,1018</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Attach to the Stock Finance Page" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="BrowserScope_15" InformativeScreenshot="21af2118ab695ebcdea844c088b13dfd" Selector="&lt;html app='firefox.exe' title='Yahoo Finance*' /&gt;">
@@ -371,7 +371,7 @@
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NavigateTo_10" Url="https://finance.yahoo.com" />
+                                          <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="NavigateTo_10" Url="https://finance.yahoo.com" />
                                         </Sequence>
                                       </ActivityAction>
                                     </ui:BrowserScope.Body>
@@ -386,7 +386,7 @@
                                     <FlowStep x:Name="__ReferenceID0">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">411,818</av:Point>
+                                          <av:Point x:Key="ShapeLocation">181,1018</av:Point>
                                           <av:Size x:Key="ShapeSize">200,66</av:Size>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
@@ -419,9 +419,9 @@
                             <FlowStep x:Name="__ReferenceID6">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">100,616</av:Point>
+                                  <av:Point x:Key="ShapeLocation">730,616</av:Point>
                                   <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">200,667 200,697 204,697 204,717</av:PointCollection>
+                                  <av:PointCollection x:Key="ConnectorLocation">830,667 830,697 834,697 834,717</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Search" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_41" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
@@ -452,12 +452,12 @@
                                 <FlowStep x:Name="__ReferenceID1">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">104,717</av:Point>
+                                      <av:Point x:Key="ShapeLocation">734,717</av:Point>
                                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">204,768 204,798 211,798 211,818</av:PointCollection>
+                                      <av:PointCollection x:Key="ConnectorLocation">834,768 834,798 841,798 841,818</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Attach to the Stock Finance Page" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="BrowserScope_14" InformativeScreenshot="21af2118ab695ebcdea844c088b13dfd" Selector="&lt;html app='firefox.exe' title='{{transaction_Item}}*' /&gt;">
+                                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Attach to the Stock Finance Page" sap:VirtualizedContainerService.HintSize="434,212" sap2010:WorkflowViewState.IdRef="BrowserScope_14" InformativeScreenshot="21af2118ab695ebcdea844c088b13dfd" Selector="&lt;html app='firefox.exe' title='{{transaction_Item}}*' /&gt;">
                                     <ui:BrowserScope.Body>
                                       <ActivityAction x:TypeArguments="x:Object">
                                         <ActivityAction.Argument>
@@ -469,7 +469,7 @@
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Historical Data" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_31" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                                          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Historical Data" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_31" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                                             <ui:Click.CursorPosition>
                                               <ui:CursorPosition Position="Center">
                                                 <ui:CursorPosition.OffsetX>
@@ -526,7 +526,7 @@
                                               </ui:Target>
                                             </ui:TypeInto.Target>
                                           </ui:TypeInto>
-                                          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type in End Date" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_19" SendWindowMessages="False" SimulateType="False" Text="[datetime.ParseExact(end_Dato,&quot;MM/dd/yyyy HH:mm:ss&quot;,system.Globalization.CultureInfo.InvariantCulture).ToString(&quot;MM/dd/yyyy&quot;)]">
+                                          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type in End Date" EmptyField="True" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TypeInto_19" SendWindowMessages="False" SimulateType="False" Text="[datetime.ParseExact(end_Dato,&quot;MM/dd/yyyy HH:mm:ss&quot;,system.Globalization.CultureInfo.InvariantCulture).ToString(&quot;MM/dd/yyyy&quot;)]">
                                             <ui:TypeInto.Target>
                                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7212fd210a4fbdf52707c78ae7686dfb" Selector="&lt;webctrl name='endDate' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
                                                 <ui:Target.TimeoutMS>
@@ -607,9 +607,9 @@
                                     <FlowStep x:Name="__ReferenceID2">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">111,818</av:Point>
+                                          <av:Point x:Key="ShapeLocation">741,818</av:Point>
                                           <av:Size x:Key="ShapeSize">200,66</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">211,884 211,914 283,914 283,934</av:PointCollection>
+                                          <av:PointCollection x:Key="ConnectorLocation">841,884 841,914 623,914 623,974</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <Sequence DisplayName="Download the File" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_76">
@@ -741,9 +741,9 @@
                                         <FlowStep x:Name="__ReferenceID7">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <av:Point x:Key="ShapeLocation">183,934</av:Point>
+                                              <av:Point x:Key="ShapeLocation">523,974</av:Point>
                                               <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                              <av:PointCollection x:Key="ConnectorLocation">183,959.5 153,959.5 153,904 633,904 633,851 611,851</av:PointCollection>
+                                              <av:PointCollection x:Key="ConnectorLocation">523,999.5 281,999.5 281,1018</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Attach to the Stock Finance Page" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="BrowserScope_16" InformativeScreenshot="21af2118ab695ebcdea844c088b13dfd" Selector="&lt;html app='firefox.exe' title='{{transaction_Item}}*' /&gt;">
