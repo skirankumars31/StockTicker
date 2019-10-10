@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>641,1124</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>641,1407</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -59,9 +59,15 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: Open and initialize application as needed.&#xA;&#xA;Pre Condition: N/A&#xA;Post Condtion: Applications opened" DisplayName="Initialization Sequence" sap:VirtualizedContainerService.HintSize="621,1064" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap2010:Annotation.AnnotationText="Description: Open and initialize application as needed.&#xA;&#xA;Pre Condition: N/A&#xA;Post Condtion: Applications opened" DisplayName="Initialization Sequence" sap:VirtualizedContainerService.HintSize="621,1347" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="search_Exists" />
+      <Variable x:TypeArguments="x:String" Name="url" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -70,7 +76,55 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Begin message" sap:VirtualizedContainerService.HintSize="579,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Begin -- Initializing Applications&quot;]" />
-    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Open Browser" Hidden="False" sap:VirtualizedContainerService.HintSize="579,213" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="https://finance.yahoo.com">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="579,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,158" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="Test Init" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[url]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">https://finance.yahoo.com</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <Sequence DisplayName="Init" sap:VirtualizedContainerService.HintSize="579,152" sap2010:WorkflowViewState.IdRef="Sequence_12">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[url]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[in_Glb_Process_Data("StockUrl").ToString]</InArgument>
+        </Assign.Value>
+      </Assign>
+    </Sequence>
+    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Open Browser" Hidden="False" sap:VirtualizedContainerService.HintSize="579,213" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="[url]">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -87,7 +141,7 @@
         </ActivityAction>
       </ui:OpenBrowser.Body>
     </ui:OpenBrowser>
-    <ui:UiElementExists DisplayName="Element Exists 'INPUT  yfin-usr-qry'" Exists="[search_Exists]" sap:VirtualizedContainerService.HintSize="579,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+    <ui:UiElementExists DisplayName="Find if Search Box Exists" Exists="[search_Exists]" sap:VirtualizedContainerService.HintSize="579,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
       <ui:UiElementExists.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="bbdc47ec5e26a1e6d083f83e200db0a0" Selector="&lt;html app='firefox.exe' title='Yahoo Finance*' /&gt;&lt;webctrl id='yfin-usr-qry' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
           <ui:Target.TimeoutMS>
@@ -96,7 +150,7 @@
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <If Condition="[search_Exists]" sap:VirtualizedContainerService.HintSize="579,239" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[search_Exists]" DisplayName="Check if Search Box Exists" sap:VirtualizedContainerService.HintSize="579,239" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Search box exists&quot;]" />
       </If.Then>
