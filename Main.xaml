@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>500,439</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>500,479</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -87,7 +87,7 @@
               <av:PointCollection x:Key="ConnectorLocation">90,97.5 120,97.5 120,82.05 384.5,82.05</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="A transaction either succeeds or fails with a Business Rule Exception or a System Error. For System Error, it can be retried." DisplayName="Fetch Files for the Stock Ident" sap:VirtualizedContainerService.HintSize="231,142" sap2010:WorkflowViewState.IdRef="State_8">
+          <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="A transaction either succeeds or fails with a Business Rule Exception or a System Error. For System Error, it can be retried." DisplayName="Fetch Files for the Stock Ident" sap:VirtualizedContainerService.HintSize="484,819" sap2010:WorkflowViewState.IdRef="State_8">
             <State.Entry>
               <TryCatch DisplayName="Fetch Files for the Stock Ident" sap:VirtualizedContainerService.HintSize="438,336" sap2010:WorkflowViewState.IdRef="TryCatch_10">
                 <sap:WorkflowViewStateService.ViewState>
@@ -427,7 +427,7 @@
             </State.Transitions>
           </State>
           <x:Reference>__ReferenceID1</x:Reference>
-          <State x:Name="__ReferenceID2" DisplayName="Initialize Config" sap:VirtualizedContainerService.HintSize="254,61" sap2010:WorkflowViewState.IdRef="State_10">
+          <State x:Name="__ReferenceID2" DisplayName="Initialize Config" sap:VirtualizedContainerService.HintSize="346,524" sap2010:WorkflowViewState.IdRef="State_10">
             <State.Entry>
               <TryCatch DisplayName="Catch intialization exceptions" sap:VirtualizedContainerService.HintSize="601,983" sap2010:WorkflowViewState.IdRef="TryCatch_7">
                 <sap:WorkflowViewStateService.ViewState>
@@ -474,14 +474,14 @@
                               <InArgument x:TypeArguments="x:Object">[job_Id]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <Sequence DisplayName="Create Directory" sap:VirtualizedContainerService.HintSize="334,66" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                          <Sequence DisplayName="Create Directory" sap:VirtualizedContainerService.HintSize="621,575" sap2010:WorkflowViewState.IdRef="Sequence_36">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If Condition="[Directory.Exists(glb_Process_Data(&quot;InputPDFFil&quot;).ToString+&quot;\&quot;+&quot;Processed&quot;)]" sap:VirtualizedContainerService.HintSize="579,239" sap2010:WorkflowViewState.IdRef="If_3">
+                            <If Condition="[Directory.Exists(glb_Process_Data(&quot;InputMappe&quot;).ToString+&quot;\&quot;+&quot;Processed&quot;)]" sap:VirtualizedContainerService.HintSize="579,235" sap2010:WorkflowViewState.IdRef="If_3">
                               <If.Then>
                                 <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info" Message="[&quot;Processed Directory is Already Present&quot;]" />
                               </If.Then>

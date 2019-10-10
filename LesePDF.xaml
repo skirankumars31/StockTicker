@@ -394,15 +394,15 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                <Assign DisplayName="Get Input Folder" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[pdf_Path]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">[io_Glb_Process_Data("InputPDFFil").ToString]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[io_Glb_Process_Data("InputMappe").ToString]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+                <Assign DisplayName="Assign Processed Directory" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_17">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[processed_Directory]</OutArgument>
                   </Assign.To>
@@ -410,7 +410,7 @@
                     <InArgument x:TypeArguments="x:String">[pdf_Path+"\"+"Processed"]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_19">
+                <Assign DisplayName="Initialize Stock Array List" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_19">
                   <Assign.To>
                     <OutArgument x:TypeArguments="scg:List(x:String)">[out_Stock_Array_List]</OutArgument>
                   </Assign.To>
